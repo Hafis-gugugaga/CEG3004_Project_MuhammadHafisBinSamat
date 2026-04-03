@@ -121,14 +121,7 @@ The following outputs will be generated:
 Pr_5_model.joblib
 Pr_5_predictions.csv
 
-# 7. Repository Structure
-.
-├── ceg3004_project.py
-├── Pr_5_model.joblib
-├── Pr_5_predictions.csv
-└── README.md
-
-# 8. Dependencies
+# 7. Dependencies
 
 The project uses the following Python libraries:
 
@@ -141,7 +134,7 @@ matplotlib (optional)
 Install dependencies
 pip install numpy pandas librosa scikit-learn joblib matplotlib
 
-# 9. Reproducibility
+# 8. Reproducibility
 
 To ensure reproducibility:
 
