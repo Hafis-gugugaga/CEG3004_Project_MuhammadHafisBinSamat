@@ -1,16 +1,16 @@
 # CEG3004_Project_MuhammadHafisBinSamat
-Environmental Sound Classification (CEG3004)
-1. Overview
+# Environmental Sound Classification (CEG3004)
+# 1. Overview
 
 This project implements an audio classification system for environmental sounds using the ESC-50 dataset. Each audio clip is 5 seconds long and must be classified into one of 50 sound categories.
 
 The key objective is not only to perform well on clean audio, but also to remain reliable under real-world distortions such as noise and limited frequency bandwidth.
 
-2. System Pipeline
+# 2. System Pipeline
 
 The system consists of three main stages: preprocessing, feature extraction, and classification.
 
-2.1 Audio Preprocessing
+# 2.1 Audio Preprocessing
 
 Each audio clip is standardised before feature extraction:
 
@@ -25,7 +25,7 @@ A simple high-pass filter is applied to enhance higher frequencies, which improv
 
 These steps reduce variability and improve the consistency of the extracted features.
 
-2.2 Feature Extraction
+# 2.2 Feature Extraction
 
 A combination of spectral and time-domain features is used to represent each audio clip.
 
@@ -63,7 +63,7 @@ Median
 
 Median pooling is included to reduce sensitivity to noise and outliers.
 
-2.3 Classification Model
+# 2.3 Classification Model
 
 A Support Vector Machine (SVM) with an RBF kernel is used.
 
@@ -75,7 +75,7 @@ Suitable for moderate-sized datasets
 
 Class imbalance is handled using balanced class weights.
 
-3. Results and Analysis
+# 3. Results and Analysis
 
 The dataset was split into training and validation sets using an 80/20 split.
 
@@ -88,7 +88,7 @@ Some classes show low recall, indicating confusion between similar patterns
 
 Overall, the model demonstrates stable performance across a wide range of classes.
 
-4. Robustness Considerations
+# 4. Robustness Considerations
 
 The system is designed to perform under:
 
@@ -101,7 +101,8 @@ Robustness is achieved through:
 Preprocessing (normalization and trimming)
 Use of diverse spectral and time-domain features
 Inclusion of median pooling to reduce sensitivity to distortions
-5. Experiments and Improvements
+
+# 5. Experiments and Improvements
 
 The following improvements were made over the baseline implementation:
 
@@ -112,20 +113,22 @@ Replaced Logistic Regression with SVM
 
 These changes improved both performance and stability across different conditions.
 
-6. How to Run
+# 6. How to Run
 Open the provided notebook or Python script
 Install required dependencies
 Run all cells from top to bottom
 The following outputs will be generated:
 Pr_5_model.joblib
 Pr_5_predictions.csv
-7. Repository Structure
+
+# 7. Repository Structure
 .
 ├── ceg3004_project.py
 ├── Pr_5_model.joblib
 ├── Pr_5_predictions.csv
 └── README.md
-8. Dependencies
+
+# 8. Dependencies
 
 The project uses the following Python libraries:
 
@@ -138,7 +141,7 @@ matplotlib (optional)
 Install dependencies
 pip install numpy pandas librosa scikit-learn joblib matplotlib
 
-9. Reproducibility
+# 9. Reproducibility
 
 To ensure reproducibility:
 
